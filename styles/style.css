@@ -7,18 +7,39 @@ body {
   font-weight: 900;
 }
 
+/* 레이아웃 */
+.header, .visual, .main, .slogan, .footer-inner {
+  width: 940px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+/* 헤더 */
 .header {
   background: pink;
+  padding: 0 30px;
+  height: 15vh;
 }
+/* 비쥬얼 */
 .visual {
   background: orange;
+  height: 10vh;
 }
+/* 메인 */
 .main {
   background: lightgreen;
+  height: 50vh;
 }
+/* 슬로건 */
 .slogan {
   background: skyblue;
+  height: 10vh;
 }
+/* 푸터 */
 .footer {
   background: gray;
+}
+/* 푸터이너 */
+.footer-inner {
+  background: red;
+  height: 15vh;
 }
