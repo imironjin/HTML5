@@ -32,9 +32,14 @@ body {
 /* 메인 */
 .main {
   background: lightgreen;
-  height: 50vh;
+  min-height: 450px;
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
+  /* flex-wrap: nowrap; */
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 30px;
 }
 
 .group1 {
