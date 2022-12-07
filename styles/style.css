@@ -207,9 +207,25 @@ Button에 주는 것이다. 스타일을 누구한테 줄 것인지 잘 생각 *
 }
 
 /* 비쥬얼 */
+
+@keyframes moveEffect {
+  0% {
+    font-size: 12px;
+  }
+  100% {
+    font-size: 24px;
+  }
+}
+
 .visual {
   background: orange;
   height: 10vh;
+}
+
+.visual-text {
+  background-color: coral;
+  animation-name: moveEffect;
+  animation-duration: 2000ms;
 }
 /* 메인 */
 .main {
