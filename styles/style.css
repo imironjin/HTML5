@@ -223,15 +223,48 @@ Button에 주는 것이다. 스타일을 누구한테 줄 것인지 잘 생각 *
   }
 }
 
+@keyframes fadeEffect {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .visual {
   height: 120px;
   position: relative;
 }
 
+.visual::before, .visual::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  animation-name: fadeEffect;
+  animation-duration: 2000ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.visual::before {
+  background: url(./images/ani_flower_01.png) no-repeat  0 -15px,
+              url(./images/ani_flower_02.png) no-repeat 600px 0;
+}
+
+.visual::after {
+  background: url(./images/ani_flower_03.png) no-repeat 300px 0,
+              url(./images/ani_flower_04.png) no-repeat 800px 0;
+  animation-delay: 1000ms;
+}
+
 .visual-text {
   font-family: Georgia, 'Times New Roman', Times, serif;
   animation-name: moveEffect;
-  animation-duration: 2000ms;
+  animation-duration: 1000ms;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
   position: absolute;
