@@ -217,7 +217,7 @@ Button에 주는 것이다. 스타일을 누구한테 줄 것인지 잘 생각 *
   100% {
     font-size: 24px;
     color: rgba(0, 0, 0, 1);
-    transform: (400px, 75px);
+    transform: translate(400px, 75px);
   }
 }
 
@@ -232,8 +232,9 @@ Button에 주는 것이다. 스타일을 누구한테 줄 것인지 잘 생각 *
   background-color: coral;
   animation-name: moveEffect;
   animation-duration: 2000ms;
+  animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
-  display: inline-block;
+  position: absolute;
 }
 /* 메인 */
 .main {
