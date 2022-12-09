@@ -3,13 +3,13 @@
 @import url(./reset.css);
 
 /* 접근 가능한 숨김 콘텐츠(웹 접근성을 고려한) */
-.a11y-hidden {
+.a11y-hidden, legend {
   position: absolute;
   width: 1px;
   height: 1px;
   overflow: hidden;
   /* clip: rect(0 0 0 0); 레거시 브라우저 */
-  clip-path: polygon(0 0, 0 0,0 0 0);
+  clip-path: polygon(0 0, 0 0, 0 0);
 }
 /* 기본 스타일 */
 *, *::before, *::after {
@@ -271,10 +271,11 @@ Button에 주는 것이다. 스타일을 누구한테 줄 것인지 잘 생각 *
 }
 /* 메인 */
 .main {
-  background: lightgreen;
-  height: 50vh;
+  background: #fff;
+  min-height: 450px;
   display: flow-root;
-  padding: 0 15px;
+  padding: 30px 15px;
+  border-radius: 15px 15px 0 0;
 }
 .group {
   margin: 0 15px;
@@ -283,7 +284,9 @@ Button에 주는 것이다. 스타일을 누구한테 줄 것인지 잘 생각 *
 .group1 {
   background-color: violet;
   width: 250px;
+  border-radius: 5px;
 }
+
 .group2 {
   background-color: blue;
   width: 380px;
@@ -291,6 +294,103 @@ Button에 주는 것이다. 스타일을 누구한테 줄 것인지 잘 생각 *
 .group3 {
   background-color: white;
   width: 190px;
+}
+
+.login {
+  box-shadow: 5px 5px 0 0 #ccc;
+  background: orange radial-gradient(circle at right top, orange, orangered);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.login-title {
+  color: yellow;
+  font-size: 15px;
+  font-weight: 700;
+  padding-left: 10px;
+}
+
+.login-form {
+  background-color: #fff;
+  margin-top: 10px;
+  border-radius: 5px 5px 0 0;
+  padding: 10px 10px 0 10px;
+}
+
+.login-form fieldset {
+  position: relative;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+.user-email, .user-pw {
+  margin-bottom: 5px;
+}
+
+.login-form label {
+  display: inline-block;
+  width: 4em;
+}
+
+.login-form input {
+  width: 90px;
+  height: 24px;
+  border: 1px solid #aaa;
+  padding: 1px 1px 1px 5px;
+  border-radius: 3px;
+}
+
+.login-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 53px;
+  background-color: #e85e2c;
+  color: #fff;
+  border: 0;
+  padding: 0 8px;
+  border-radius: 5px;
+  font-size: 13px;
+}
+
+.sign {
+  background-color: #fff;
+  border-radius: 0 0 5px 5px;
+  padding: 4px 10px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+/* .sign li {
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: 400;
+} */
+
+.sign a {
+  display: block;
+  padding: 6px 0;
+  letter-spacing: -1px;
+}
+
+.sign a::before {
+  content: "\e800";
+  color: #e85e2c;
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: .2em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* 슬로건 */
