@@ -282,7 +282,6 @@ Button에 주는 것이다. 스타일을 누구한테 줄 것인지 잘 생각 *
   float: left;
 }
 .group1 {
-  background-color: violet;
   width: 250px;
   border-radius: 5px;
 }
@@ -357,19 +356,34 @@ Button에 주는 것이다. 스타일을 누구한테 줄 것인지 잘 생각 *
   background-color: #fff;
   border-radius: 0 0 5px 5px;
   padding: 4px 10px;
-  display: flex;
+
+  /* flex를 이용한 로그인 */
+  /* display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
+  justify-content: space-between; */
+  font-size: 0;
 }
 
-/* .sign li {
+.sign li {
   display: inline-block;
-  margin-top: 10px;
+  padding: 10px 0;
+  font-size: 14px;
   font-weight: 400;
-} */
+  
+} 
+
+.sign li:first-child {
+  width: 35%;
+}
+
+.sign li:last-child {
+  width: 65%;
+  text-align: right;
+}
+
 
 .sign a {
-  display: block;
+  display: inline-block;
   padding: 6px 0;
   letter-spacing: -1px;
 }
@@ -391,6 +405,29 @@ Button에 주는 것이다. 스타일을 누구한테 줄 것인지 잘 생각 *
   margin-left: .2em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* 유효성 검사 배너 */
+.validation-list {
+  margin-top: 25px;
+}
+
+.validation-list li {
+  margin-top: 10px;
+}
+
+.validation-list a {
+  display: block;
+  background: url(./images/validation_icon.png) no-repeat 25px 50%,
+  #ccc linear-gradient(to bottom, #ccc, #eee);
+  padding: 8px 15px 8px 55px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+
+.validation-list a:hover,
+.validation-list a:focus {
+  color: #f00;
 }
 
 /* 슬로건 */
