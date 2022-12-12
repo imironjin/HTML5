@@ -287,7 +287,6 @@ Button에 주는 것이다. 스타일을 누구한테 줄 것인지 잘 생각 *
 }
 
 .group2 {
-  background-color: blue;
   width: 380px;
 }
 .group3 {
@@ -446,23 +445,24 @@ Button에 주는 것이다. 스타일을 누구한테 줄 것인지 잘 생각 *
 
 .term-list {
   margin-top: 10px;
-  background-color: yellow;
 }
 
 .term-list div {
-  background-color: pink;
   margin-top: 10px;
   display: flow-root;
 }
 
-.term-list-subject  {
-  background-color: lime;
+.term-list-subject,
+.term-list-brief {
   float: right;
   width: 145px;
 }
+.term-list-subject  {
+  color: #296897;
+  font-weight: 500;
+}
 
 .term-list-thumbnail {
-  background-color: purple;
   float: left;
 }
 
@@ -471,11 +471,72 @@ Button에 주는 것이다. 스타일을 누구한테 줄 것인지 잘 생각 *
 }
 
 .term-list-brief  {
-  background-color: coral;
-  float: right;
-  width: 145px;
+  margin-top: 5px;
+  line-height: 1.5;
 }
 
+.cross .term-list-subject,
+.cross .term-list-brief {
+  float: left;
+}
+
+.cross .term-list-thumbnail {
+  float: right;
+}
+
+/* 검색 폼 */
+.search-form {
+  background: #ccc linear-gradient(to bottom, #ccc, #eee);
+  border: 1px solid #aaa;
+  border-radius: 15px 15px 0 0;
+  padding: 15px 25px 10px 25px;
+}
+
+.search-form-inner {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.form-group {
+  flex-grow: 1;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding-right: 10px;
+}
+
+.form-group-label {
+  white-space: nowrap;
+  margin-right: 10px;
+}
+
+.form-group-input {
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  height: 24px;
+  padding: 1px 1px 1px 5px;
+  flex-grow: 1;
+  /* min-width: 0;
+  max-width: 100%; */
+}
+
+.search-button {
+  white-space: nowrap;
+  background-color: #000;
+  color: #fff;
+  height: 24px;
+  border: 0;
+  border-radius: 3px;
+  padding: 0 10px;
+  font-size: 1.2rem;
+}
+
+.button-fill {
+  background-color: #212121;
+  color: #eee;
+  border: 1px solid;
+  border-radius: 5px;
+}
 
 /* 슬로건 */
 .slogan {
