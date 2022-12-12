@@ -506,7 +506,8 @@ Button에 주는 것이다. 스타일을 누구한테 줄 것인지 잘 생각 *
 }
 
 .form-group-label {
-  white-space: nowrap;
+  /* white-space: nowrap; */
+  flex-shrink: 0;
   margin-right: 10px;
 }
 
@@ -516,12 +517,15 @@ Button에 주는 것이다. 스타일을 누구한테 줄 것인지 잘 생각 *
   height: 24px;
   padding: 1px 1px 1px 5px;
   flex-grow: 1;
+  width: 100%;
+  font-size: 1.2rem;
   /* min-width: 0;
   max-width: 100%; */
 }
 
 .search-button {
-  white-space: nowrap;
+  /* white-space: nowrap; */
+  flex-shrink: 0;
   background-color: #000;
   color: #fff;
   height: 24px;
@@ -529,13 +533,6 @@ Button에 주는 것이다. 스타일을 누구한테 줄 것인지 잘 생각 *
   border-radius: 3px;
   padding: 0 10px;
   font-size: 1.2rem;
-}
-
-.button-fill {
-  background-color: #212121;
-  color: #eee;
-  border: 1px solid;
-  border-radius: 5px;
 }
 
 /* 슬로건 */
