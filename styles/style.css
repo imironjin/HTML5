@@ -604,6 +604,165 @@ Button에 주는 것이다. 스타일을 누구한테 줄 것인지 잘 생각 *
   margin-left: 10px;
 }
 
+/* 뉴스 */
+/* 새소식 */
+.news {
+  margin-top: 20px;
+  position: relative;
+}
+
+.news::before {
+  content: "";
+  position: absolute;
+  top: 35px;
+  left: 0;
+  width: 80%;
+  height: 1px;
+  background: #ccc linear-gradient(to right, #ccc, #eee);
+}
+
+.news-title {
+  color: #e85e2c;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.news-link {
+  display: block;
+  position: relative;
+}
+
+.news-item {
+  margin-top: 35px;
+  padding-left: 130px;
+  position: relative;
+}
+
+.news-item-title {
+  font-weight: 500;
+}
+
+.news-item-date {
+  display: block;
+  margin: 5px 0 10px;
+}
+
+.news-item-brief {
+  line-height: 1.5;
+}
+
+.news-item-thumbnail {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  text-align: center;
+}
+
+.news-item-thumbnail img  {
+  box-shadow: 0 15px 10px 5px #ccc;
+  margin-bottom: 15px;
+}
+.news-more {
+  /* normal flow상 부모의 영역을 차지하지 않는다. 떠있는게 되버림 */
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  padding: 8px;
+}
+
+/* 신규 이벤트 및 관련 사이트 */
+
+.gradient-effect {
+  background: #ccc linear-gradient(to bottom, #ccc, #eee);
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.accent-color {
+  color: #e85e2c;
+}
+
+.event {
+  border-bottom: 1px solid #aaa;
+  position: relative;
+}
+
+.event-button-wrapper {
+  margin-top: -2px;
+  height: 20px;
+  overflow: hidden;
+  /* display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 5px; */
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* IR기법 -> Image Replacement 기법 */
+.event-button {
+  width: 19px;
+  height: 100%;
+  border: 0;
+  /* padding 트릭을 통해 하는 방법 */
+  /* padding: 18px 0 0 0; */
+  background: url(./images/back_forward.png) no-repeat;
+
+  /* text-indent를 통해 하는 방법 */
+  /* font-size를 0 주게되면 스크린 리더가 못읽게된다. */
+  font-size: 1px;
+	line-height: 0;
+	text-indent:-9999px;
+}
+
+.event-button-prev {
+  background-position: 0 0;
+
+}
+
+.event-button-next {
+  background-position: -36px 0;
+}
+
+.event-button:focus {
+  outline-offset: -2px;
+}
+.event-thumbnail,
+.event-brief {
+  margin: 10px 0;
+}
+
+.event-thumbnail img {
+  border: 1px solid #aaa;
+  /* box-shadow: ; */
+}
+.event-brief {
+  line-height: 1.5;
+}
+.related {
+  margin-top: 10px
+}
+
+.related-list {
+  background-color: #fff;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  margin-top: 10px;
+  list-style: none;
+  height: 27px;
+  overflow: hidden;
+  transition: height 400ms 0ms, padding 500ms 500ms;
+  line-height: 1.8;
+  padding: 0 0 0 20px;
+}
+
+.related-list:hover,
+.relate-list:focus {
+  height: 147px;
+  padding-top: 10px;
+}
 /* 슬로건 */
 .slogan {
   background: skyblue;
